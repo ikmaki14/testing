@@ -10,11 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        label.isHidden = true
     }
 
-
+    @IBAction func buttonClicked(_ sender: Any) {
+        label.isHidden = false
+    }
+    
 }
 

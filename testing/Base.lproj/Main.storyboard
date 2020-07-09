@@ -24,22 +24,46 @@
                                     <constraint firstAttribute="width" constant="375" id="ghS-TO-w77"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXD-XF-IIY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXD-XF-IIY">
                                 <rect key="frame" x="166" y="114" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="Ehi-PE-klJ"/>
+                                    <constraint firstAttribute="height" constant="21" id="Ezk-In-cAj"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htT-ZR-7Bx">
+                                <rect key="frame" x="164" y="160" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="2Aq-Bi-iFu"/>
+                                    <constraint firstAttribute="height" constant="30" id="u1k-7E-W2s"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J7P-9T-7IV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="PXD-XF-IIY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="94" id="0qm-hv-MMy"/>
+                            <constraint firstItem="htT-ZR-7Bx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="24n-Bm-cNS"/>
                             <constraint firstItem="e1K-wf-RKa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4UJ-kJ-ZY5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PXD-XF-IIY" secondAttribute="trailing" constant="167" id="8eS-i2-Dha"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="htT-ZR-7Bx" secondAttribute="bottom" constant="477" id="Gwc-vh-XWr"/>
+                            <constraint firstItem="htT-ZR-7Bx" firstAttribute="top" secondItem="PXD-XF-IIY" secondAttribute="bottom" constant="25" id="Ncy-Nu-dft"/>
                             <constraint firstItem="e1K-wf-RKa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RDL-Xy-s7w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="htT-ZR-7Bx" secondAttribute="trailing" constant="165" id="Rok-pe-PWl"/>
+                            <constraint firstItem="PXD-XF-IIY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="166" id="bIr-uh-xwm"/>
                             <constraint firstItem="e1K-wf-RKa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fFS-vn-SgA"/>
                             <constraint firstItem="e1K-wf-RKa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="og8-Ea-F8g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="PXD-XF-IIY" id="o3c-tD-cqM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
